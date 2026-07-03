@@ -6,18 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Human × AI Portfolio</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <style>
         :root {
             --bg: #070A12;
-            --card: rgba(255, 255, 255, 0.06);
-            --stroke: rgba(255, 255, 255, 0.12);
-            --text: rgba(255, 255, 255, 0.85);
-            --muted: rgba(255, 255, 255, 0.6);
-            --accent1: #7C3AED;
-            --accent2: #22D3EE;
-            --accent3: #34D399;
+            --card: rgba(255, 255, 255, 0.05);
+            --stroke: rgba(255, 255, 255, 0.10);
+            --text: rgba(255, 255, 255, 0.88);
+            --muted: rgba(255, 255, 255, 0.55);
+            --accent: linear-gradient(90deg, #7C3AED, #22D3EE);
         }
 
         * {
@@ -28,22 +26,22 @@
         }
 
         body {
-            background: radial-gradient(1200px 800px at 20% 10%, rgba(124, 58, 237, 0.25), transparent),
-                radial-gradient(1000px 700px at 80% 30%, rgba(34, 211, 238, 0.18), transparent),
+            background: radial-gradient(900px 600px at 20% 10%, rgba(124, 58, 237, 0.18), transparent),
+                radial-gradient(800px 500px at 80% 30%, rgba(34, 211, 238, 0.12), transparent),
                 var(--bg);
             color: var(--text);
-            overflow-x: hidden;
         }
 
         /* HERO */
         .hero {
-            padding: 120px 10%;
-            text-align: center;
+            padding: 120px 10% 80px;
+            max-width: 1000px;
+            margin: auto;
         }
 
         .badge {
             display: inline-block;
-            padding: 8px 14px;
+            padding: 6px 12px;
             border: 1px solid var(--stroke);
             border-radius: 999px;
             font-size: 12px;
@@ -52,57 +50,69 @@
         }
 
         h1 {
-            font-size: 64px;
-            margin-top: 20px;
-            line-height: 1.05;
+            margin-top: 24px;
+            font-size: 54px;
+            line-height: 1.1;
+            letter-spacing: -1px;
         }
 
-        .gradient-text {
-            background: linear-gradient(90deg, var(--accent1), var(--accent2), var(--accent3));
+        .gradient {
+            background: var(--accent);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         .subtitle {
-            margin-top: 20px;
-            font-size: 18px;
+            margin-top: 18px;
+            font-size: 16px;
             color: var(--muted);
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+            max-width: 650px;
+            line-height: 1.6;
         }
 
-        /* GRID */
+        /* SECTION */
         .section {
-            padding: 80px 10%;
+            padding: 60px 10% 100px;
+            max-width: 1100px;
+            margin: auto;
         }
 
         .section h2 {
-            font-size: 28px;
-            margin-bottom: 30px;
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--muted);
+            margin-bottom: 24px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
+        /* GRID */
         .grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
+            gap: 18px;
         }
 
-        /* CARDS */
+        /* CARD (CLICKABLE) */
         .card {
+            position: relative;
+            padding: 22px;
+            border-radius: 16px;
             background: var(--card);
             border: 1px solid var(--stroke);
-            border-radius: 18px;
-            padding: 24px;
             backdrop-filter: blur(14px);
-            transition: 0.3s ease;
-            position: relative;
+            cursor: pointer;
+            transition: 0.25s ease;
             overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            display: block;
         }
 
         .card:hover {
-            transform: translateY(-6px);
-            border-color: rgba(255, 255, 255, 0.25);
+            transform: translateY(-4px);
+            border-color: rgba(255, 255, 255, 0.22);
+            background: rgba(255, 255, 255, 0.07);
         }
 
         .tag {
@@ -112,24 +122,32 @@
 
         .card h3 {
             margin-top: 10px;
-            font-size: 20px;
+            font-size: 18px;
+            font-weight: 500;
         }
 
         .card p {
             margin-top: 10px;
-            color: var(--muted);
             font-size: 14px;
+            color: var(--muted);
             line-height: 1.5;
         }
 
-        .glow {
+        /* subtle corner highlight */
+        .card::after {
+            content: "";
             position: absolute;
-            width: 200px;
-            height: 200px;
-            background: radial-gradient(circle, rgba(124, 58, 237, 0.25), transparent);
-            top: -50px;
-            right: -50px;
-            filter: blur(20px);
+            top: -80px;
+            right: -80px;
+            width: 160px;
+            height: 160px;
+            background: radial-gradient(circle, rgba(124, 58, 237, 0.15), transparent);
+            opacity: 0;
+            transition: 0.3s ease;
+        }
+
+        .card:hover::after {
+            opacity: 1;
         }
 
         /* FOOTER */
@@ -137,14 +155,14 @@
             text-align: center;
             padding: 60px;
             color: var(--muted);
-            font-size: 14px;
+            font-size: 13px;
         }
 
-        /* ANIMATION */
+        /* REVEAL */
         .reveal {
             opacity: 0;
-            transform: translateY(20px);
-            transition: 0.8s ease;
+            transform: translateY(14px);
+            transition: 0.6s ease;
         }
 
         .reveal.show {
@@ -152,9 +170,10 @@
             transform: translateY(0);
         }
 
+        /* MOBILE */
         @media (max-width: 900px) {
             h1 {
-                font-size: 40px;
+                font-size: 38px;
             }
 
             .grid {
@@ -167,16 +186,16 @@
 <body>
 
     <div class="hero">
-        <div class="badge">Human × AI Collaboration Designer</div>
+        <div class="badge">Human × AI Collaboration</div>
 
         <h1>
-            I design systems where<br>
-            <span class="gradient-text">humans and AI think together</span>
+            Designing systems where<br>
+            humans & AI <span class="gradient">think together</span>
         </h1>
 
         <p class="subtitle">
-            I build workflows, tools, and interfaces that merge human intuition with machine intelligence —
-            turning AI from a tool into a collaborative partner.
+            I build interfaces and workflows that turn AI from a tool into a creative partner —
+            shaping decisions, writing, and design through collaboration loops.
         </p>
     </div>
 
@@ -185,56 +204,39 @@
 
         <div class="grid">
 
-            <div class="card reveal">
-                <div class="glow"></div>
-                <div class="tag">AI Co-Writing System</div>
+            <a class="card reveal" href="project1.html">
+                <div class="tag">Co-Writing System</div>
                 <h3>Neural Writing Studio</h3>
-                <p>
-                    A real-time co-writing environment where AI suggests structure, tone, and rewrites while the human
-                    retains narrative control.
-                </p>
-            </div>
+                <p>Real-time AI co-writing with structure, tone control, and iterative narrative refinement.</p>
+            </a>
 
-            <div class="card reveal">
-                <div class="glow"></div>
+            <a class="card reveal" href="project2.html">
                 <div class="tag">Decision Intelligence</div>
-                <h3>AI Strategy Mirror</h3>
-                <p>
-                    A system that simulates alternative decision paths and visualizes outcomes to improve human
-                    strategic thinking.
-                </p>
-            </div>
+                <h3>Strategy Mirror</h3>
+                <p>Explores alternate futures of decisions using AI-simulated outcome branching.</p>
+            </a>
 
-            <div class="card reveal">
-                <div class="glow"></div>
-                <div class="tag">Human-AI UX</div>
-                <h3>Adaptive Interface Layer</h3>
-                <p>
-                    A UI that changes complexity dynamically based on user behavior, reducing cognitive load during
-                    high-focus tasks.
-                </p>
-            </div>
+            <a class="card reveal" href="project3.html">
+                <div class="tag">Adaptive UX</div>
+                <h3>Context-Aware Interface Layer</h3>
+                <p>Interfaces that adapt complexity dynamically based on user cognitive load.</p>
+            </a>
 
-            <div class="card reveal">
-                <div class="glow"></div>
+            <a class="card reveal" href="project4.html">
                 <div class="tag">Creative Systems</div>
                 <h3>Generative Design Partner</h3>
-                <p>
-                    A tool where AI proposes multiple creative directions and humans refine them through iterative
-                    feedback loops.
-                </p>
-            </div>
+                <p>AI proposes creative directions; humans refine through iterative feedback loops.</p>
+            </a>
 
         </div>
     </div>
 
     <footer>
-        Built for GitHub Pages • Human × AI collaboration in action
+        Built for GitHub Pages — Human × AI collaboration system
     </footer>
 
     <script>
-        // simple scroll reveal
-        const elements = document.querySelectorAll('.reveal');
+        const items = document.querySelectorAll('.reveal');
 
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
@@ -242,9 +244,9 @@
                     entry.target.classList.add('show');
                 }
             });
-        }, { threshold: 0.1 });
+        }, { threshold: 0.12 });
 
-        elements.forEach(el => observer.observe(el));
+        items.forEach(el => observer.observe(el));
     </script>
 
 </body>
