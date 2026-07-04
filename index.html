@@ -1,174 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Human × AI Portfolio</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<style>
-:root{
-  --bg:#070A12;
-  --card:rgba(255,255,255,0.06);
-  --stroke:rgba(255,255,255,0.10);
-  --text:rgba(255,255,255,0.92);
-  --muted:rgba(255,255,255,0.60);
-}
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Inter, sans-serif;
-}
-
-body{
-  background:var(--bg);
-  color:var(--text);
-}
-
-/* LAYOUT */
-.container{
-  max-width:1050px;
-  margin:auto;
-  padding:90px 8%;
-}
-
-/* HERO */
-.hero{
-  margin-bottom:70px;
-}
-
-h1{
-  font-size:56px;
-  line-height:1.05;
-  letter-spacing:-1px;
-  font-weight:600;
-}
-
-.subtitle{
-  margin-top:16px;
-  max-width:650px;
-  font-size:16px;
-  line-height:1.6;
-  color:var(--muted);
-}
-
-/* SECTION LABEL */
-.label{
-  font-size:11px;
-  letter-spacing:2px;
-  color:var(--muted);
-  margin-bottom:18px;
-}
-
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:16px;
-}
-
-/* CARD (CLICKABLE) */
-.card{
-  display:block;
-  text-decoration:none;
-  color:inherit;
-
-  padding:22px;
-  border-radius:14px;
-
-  background:var(--card);
-  border:1px solid var(--stroke);
-  backdrop-filter:blur(12px);
-
-  transition:0.2s ease;
-}
-
-.card:hover{
-  transform:translateY(-4px);
-  border-color:rgba(255,255,255,0.25);
-}
-
-/* TAG */
-.tag{
-  font-size:11px;
-  color:var(--muted);
-  letter-spacing:1.5px;
-}
-
-/* TITLE */
-.card h3{
-  margin-top:10px;
-  font-size:18px;
-  font-weight:500;
-}
-
-/* DESCRIPTION */
-.card p{
-  margin-top:10px;
-  font-size:14px;
-  line-height:1.5;
-  color:var(--muted);
-}
-
-/* FOOTER */
-footer{
-  margin-top:80px;
-  padding-top:30px;
-  border-top:1px solid var(--stroke);
-  font-size:12px;
-  color:var(--muted);
-}
-
-/* RESPONSIVE */
-@media(max-width:850px){
-  h1{font-size:40px;}
-  .grid{grid-template-columns:1fr;}
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Human × AI Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
+  <main class="mx-auto flex min-h-screen max-w-5xl flex-col px-6 py-16 sm:px-8 lg:px-10">
+    <section class="mb-12">
+      <p class="mb-4 text-[11px] uppercase tracking-[0.35em] text-slate-400">Selected work</p>
+      <h1 class="max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">Human × AI collaboration.</h1>
+      <p class="mt-4 max-w-2xl text-base leading-7 text-slate-400">Welcome! I’m Fiona, M.Sc. in Human-Computer Interaction, with 4+ years of experience in research and development across industry and academia. I design systems that enable meaningful collaboration between humans and AI to support creative and impactful work.</p>
+    </section>
 
-<div class="container">
+    <div class="grid gap-4 md:grid-cols-2">
+      <a href="mixing-art.html" class="rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:border-white/25">
+        <p class="text-[11px] uppercase tracking-[0.3em] text-slate-400">AI in Art</p>
+        <h2 class="mt-3 text-xl font-medium">Mixing Art Epochs by Interpolating LoRAs's</h2>
+        <p class="mt-2 text-sm leading-6 text-slate-400">What happens when we combine Expressionism and pop art? Or naturalism and expressionism?</p>
+      </a>
 
-  <!-- HERO -->
-  <div class="hero">
-    <h1>Human × AI<br>Collaboration</h1>
+      <a href="fashion.html" class="rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:border-white/25">
+        <p class="text-[11px] uppercase tracking-[0.3em] text-slate-400">Master Thesis</p>
+        <h2 class="mt-3 text-xl font-medium">Personalized Human-In-The-Loop AI Image Generation</h2>
+        <p class="mt-2 text-sm leading-6 text-slate-400">Creating unique designs based on individual preferences.</p>
+      </a>
 
-    <p class="subtitle">
-      I design systems where humans and AI work together —
-      building tools for thinking, writing, decision-making, and creativity.
-    </p>
-  </div>
+      <a href="BA-thesis.html" class="rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:border-white/25">
+        <p class="text-[11px] uppercase tracking-[0.3em] text-slate-400">Bachelor Thesis</p>
+        <h2 class="mt-3 text-xl font-medium">Feedback System for touchless Gesture Interaction</h2>
+        <p class="mt-2 text-sm leading-6 text-slate-400">Two patents filed on the system we developed.</p>
+      </a>
 
-  <!-- WORK -->
-  <div class="label">SELECTED WORK</div>
+      <a href="sustainability.html" class="rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:border-white/25">
+        <p class="text-[11px] uppercase tracking-[0.3em] text-slate-400">Sust(AI)nability</p>
+        <h2 class="mt-3 text-xl font-medium">Sustainable Futures</h2>
+        <p class="mt-2 text-sm leading-6 text-slate-400">Exploring the role of AI in creating more sustainable urban environments.</p>
+      </a>
+    </div>
 
-  <div class="grid">
-
-    <a class="card" href="mixing-art.html">
-      <div class="tag">WRITING SYSTEM</div>
-      <h3>Neural Writing Studio</h3>
-      <p>AI-assisted writing environment for structured thinking and iterative drafting.</p>
-    </a>
-
-    <a class="card" href="fashion.html">
-      <div class="tag">DECISION SYSTEM</div>
-      <h3>Strategy Mirror</h3>
-      <p>Explores decision paths and simulates alternative outcomes for better reasoning.</p>
-    </a>
-
-    <a class="card" href="ResearchAndIp.html">
-      <div class="tag">UX SYSTEM</div>
-      <h3>Design Intelligence</h3>
-      <p>Integrates AI-driven insights into the design process for more informed creative decisions.</p>
-    </a>
-    <a class="card" href="sustainability.html">
-      <div class="tag">UX SYSTEM</div>
-      <h3>Design Intelligence</h3>
-      <p>Integrates AI-driven insights into the design process for more informed creative decisions.</p>
-    </a>
-
+    <div class="mt-10 flex justify-center">
+      <a href="cv.pdf" class="cv-button" download>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 3v10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 9l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 21H3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Download CV
+      </a>
+    </div>
+  </main>
+</body>
+</html>

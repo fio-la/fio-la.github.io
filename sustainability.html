@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fashion Image Generation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="mx-auto max-w-3xl px-6 py-16 sm:px-8">
+    <a href="index.html" class="mb-8 inline-flex text-sm text-slate-400 transition hover:text-white">← Back</a>
+    <p class="text-[11px] uppercase tracking-[0.35em] text-slate-400">Sust(AI)nability</p>
+    <h1 class="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Interactive Urban Traffic Simulation for Kempten</h1>
+    <p class="mt-5 text-base leading-7 text-slate-400">A data-driven simulation tool for exploring the impact of urban traffic transformation through interactive, real-world scenarios.
+This project investigates how infrastructure changes—such as the planned closure of a central highway bridge—can be transformed into an opportunity for sustainable mobility awareness, citizen engagement, and policy support through visual simulation and interactive storytelling.</p>
+
+    <div class="mt-10 border-t border-white/10 pt-8">
+      <h2 class="text-sm uppercase tracking-[0.3em] text-slate-400">Problem</h2>
+      <p class="mt-3 text-sm leading-7 text-slate-400">Urban areas face increasing pressure from traffic congestion, noise pollution, and CO₂ emissions, intensified by limited green spaces in city centers.
+In Kempten (Allgäu), the B19 highway runs directly through the city core, contributing significantly to traffic load and environmental impact. The planned closure of the St.-Mang-Brücke introduces both challenges and opportunities: while commuters fear delays and longer routes, the city sees potential for a more sustainable redistribution of traffic.
+The core challenge is how to make these complex infrastructural changes understandable and meaningful for citizens and decision-makers.</p>
+    </div>
+
+    <div class="mt-10 border-t border-white/10 pt-8">
+      <h2 class="text-sm uppercase tracking-[0.3em] text-slate-400">Approach</h2>
+      <p class="mt-3 text-sm leading-7 text-slate-400">We developed an interactive urban traffic simulation that transforms real traffic data into a visual, explorable system.
+Using traffic flow data from Kempten, the system simulates different scenarios such as road closures, rerouting strategies, and congestion patterns. Users can interact with the environment and immediately observe environmental and structural impacts.
+The simulation combines data-driven modeling with serious gamification and storytelling, making urban mobility planning more accessible.</p>
+    </div>
+
+    <div class="mt-10 border-t border-white/10 pt-8">
+      <h2 class="text-sm uppercase tracking-[0.3em] text-slate-400">System Design</h2>
+      <ul class="mt-3 space-y-2 text-sm leading-7 text-slate-400">
+        <p>The system is built around three core layers: </br>
+1. Traffic Simulation Engine: based on real-world mobility data, including low- and peak-hour conditions, to simulate realistic traffic behavior. </br>
+2. Interactive Visualization Layer - map-based interface visualizing: traffic flow and congestion, CO₂ emission heatmaps, noise intensity zones, dynamic rerouting effects </br>
+3. User Interaction Layer - Users can: place road barriers, adjust traffic density, trigger scenario simulations, observe real-time system responses</p>
+</ul>
+    </div>
+
+        <div class="mt-10 border-t border-white/10 pt-8">
+      <h2 class="text-sm uppercase tracking-[0.3em] text-slate-400">Interaction Concept</h2>
+      <ul class="mt-3 space-y-2 text-sm leading-7 text-slate-400">
+        <p>The application is designed for exploratory urban storytelling.
+Users can test scenarios such as: </br>
+- St.-Mang-Brücke closure scenario, traffic is rerouted through alternative paths, showing only minor increases in travel time while significantly reducing inner-city emissions and noise.</br>
+- Residenzplatz closure scenario, A second experimental setup to analyze local traffic redistribution and environmental impact.</br>
+- This transforms urban planning into an interactive cause-and-effect experience.
+</ul>
+    </div>
+
+
+     <div class="mt-10 border-t border-white/10 pt-8">
+      <h2 class="text-sm uppercase tracking-[0.3em] text-slate-400">Key Features</h2>
+      <ul class="mt-3 space-y-2 text-sm leading-7 text-slate-400">
+        <p>
+            -Real-time traffic simulation based on OSM data </br>
+            -CO₂, noise, and congestion visualizations </br>
+            -Interactive road closure system (“Set Barrier”) </br>
+            -Scenario-based exploration of urban planning decisions </br>
+            -Simplified interface designed for non-experts </br>
+            -Serious gamification for sustainable decision-making</p>
+</ul>
+    </div>
+
+     <div class="mt-10 border-t border-white/10 pt-8">
+      <h2 class="text-sm uppercase tracking-[0.3em] text-slate-400">Technology & Implementation</h2>
+      <ul class="mt-3 space-y-2 text-sm leading-7 text-slate-400">
+        <p>The system is built on a modular pipeline using open urban data and simulation tools. The workflow includes: -
+OpenStreetMap (OSM) data extraction via Overpass Turbo
+- Preprocessing and network refinement using JOSM </br> - Traffic simulation using SUMO </br> - GeoJSON conversion for visualization, React + Vite frontend for interactive map rendering </br> - Heatmaps for emissions, noise, and congestion </br> - Scenario-based simulation control system </br> - Scalable and adaptable architecture design and reusable for other cities.</p>
+</ul>
+    </div>
+
+      <div class="mt-10 border-t border-white/10 pt-8">
+      <h2 class="text-sm uppercase tracking-[0.3em] text-slate-400">Conclusion</h2>
+      <ul class="mt-3 space-y-2 text-sm leading-7 text-slate-400">
+        <p>Our tool demonstrates how urban infrastructure planning can be transformed into an accessible, interactive, and data-driven experience.
+By combining traffic simulation, visualization, and storytelling, the project helps make abstract infrastructural decisions tangible for the public.
+As cities move toward more sustainable futures, such tools can act as a bridge between data, policy, and citizen engagement.</p>
+</ul>
+    </div>
+    
+  </main>
+
+    <footer class="mt-12 flex items-center justify-between gap-4 border-t border-white/10 pt-6 text-slate-300">
+      <p class="text-sm">Links — replace with your repo and PDF.</p>
+      <div class="flex gap-3">
+        <a href="#" class="icon-link" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" class="h-4 w-4 fill-current" aria-hidden="true"><path d="M12 .5C5.8.5.9 5.4.9 12c0 5 3.2 9.3 7.6 10.8.6.1.8-.3.8-.6v-2.1c-3.1.7-3.7-1.5-3.7-1.5-.5-1.2-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 .1 1.6.8 1.9 1.1.2-.9.4-1.6.8-2-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.4-2.4 1.1-3.3-.1-.3-.5-1.5.1-3.1 0 0 .9-.3 3 .1.9-.3 1.8-.4 2.7-.4s1.8.1 2.7.4c2.1-.4 3-.1 3-.1.6 1.6.2 2.8.1 3.1.7.9 1.1 2 1.1 3.3 0 4.5-2.7 5.5-5.3 5.8.4.3.7 1 .7 2v3c0 .3.2.7.8.6 4.4-1.5 7.6-5.8 7.6-10.8C23.1 5.4 18.2.5 12 .5z"/></svg>
+        </a>
+        <a href="#" class="icon-link" aria-label="PDF">
+          <svg viewBox="0 0 24 24" class="h-4 w-4 fill-current" aria-hidden="true"><path d="M6 2h9l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm9 1.5V8h4.5L15 3.5zM6 4v16h12V9h-5a2 2 0 0 1-2-2V4H6zm7 10h2v2h-2v-2zm-4 0h2v2H9v-2z"/></svg>
+        </a>
+      </div>
+    </footer>
+</body>
+</html>
