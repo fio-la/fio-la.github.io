@@ -14,7 +14,7 @@
   <main class="mx-auto max-w-3xl px-6 py-16 sm:px-8">
     <a href="index.html" class="mb-8 inline-flex text-sm text-slate-400 transition hover:text-white">← Back</a>
     <p class="text-[11px] uppercase tracking-[0.35em] text-slate-400">Sust(AI)nability</p>
-    <h1 class="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Interactive Urban Traffic Simulation for Kempten</h1>
+    <h1 class="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Interactive Urban Traffic Simulation</h1>
     <p class="mt-5 text-base leading-7 text-slate-400">A data-driven simulation tool for exploring the impact of urban traffic transformation through interactive, real-world scenarios.
 This project investigates how infrastructure changes—such as the planned closure of a central highway bridge—can be transformed into an opportunity for sustainable mobility awareness, citizen engagement, and policy support through visual simulation and interactive storytelling.</p>
 
@@ -34,46 +34,55 @@ The simulation combines data-driven modeling with serious gamification and story
 
     <div class="mt-10 border-t border-white/10 pt-8">
       <h2 class="text-sm uppercase tracking-[0.3em] text-slate-400">System Design</h2>
-      <ul class="mt-3 space-y-2 text-sm leading-7 text-slate-400">
-        <p>The system is built around three core layers: </br>
-1. Traffic Simulation Engine: based on real-world mobility data, including low- and peak-hour conditions, to simulate realistic traffic behavior. </br>
-2. Interactive Visualization Layer - map-based interface visualizing: traffic flow and congestion, CO₂ emission heatmaps, noise intensity zones, dynamic rerouting effects </br>
-3. User Interaction Layer - Users can: place road barriers, adjust traffic density, trigger scenario simulations, observe real-time system responses</p>
-</ul>
+      <div class="mt-3 space-y-3 text-sm leading-7 text-slate-400">
+        <p>The system is built around three core layers:</p>
+        <ol class="list-decimal list-inside space-y-2">
+          <li><span class="font-medium">Traffic Simulation Engine</span>: based on real-world mobility data, including low- and peak-hour conditions, to simulate realistic traffic behavior.</li>
+          <li><span class="font-medium">Interactive Visualization Layer</span>: a map-based interface visualizing traffic flow and congestion, CO₂ emission heatmaps, noise intensity zones, and dynamic rerouting effects.</li>
+          <li><span class="font-medium">User Interaction Layer</span>: users can place road barriers, adjust traffic density, trigger scenario simulations, and observe real-time system responses.</li>
+        </ol>
+      </div>
     </div>
 
-        <div class="mt-10 border-t border-white/10 pt-8">
+    <div class="mt-10 border-t border-white/10 pt-8">
       <h2 class="text-sm uppercase tracking-[0.3em] text-slate-400">Interaction Concept</h2>
-      <ul class="mt-3 space-y-2 text-sm leading-7 text-slate-400">
-        <p>The application is designed for exploratory urban storytelling.
-Users can test scenarios such as: </br>
-- St.-Mang-Brücke closure scenario, traffic is rerouted through alternative paths, showing only minor increases in travel time while significantly reducing inner-city emissions and noise.</br>
-- Residenzplatz closure scenario, A second experimental setup to analyze local traffic redistribution and environmental impact.</br>
-- This transforms urban planning into an interactive cause-and-effect experience.
-</ul>
+      <div class="mt-3 space-y-3 text-sm leading-7 text-slate-400">
+        <p>The application is designed for exploratory urban storytelling. Users can test scenarios such as:</p>
+        <ul class="list-disc list-inside space-y-2">
+          <li>St.-Mang-Brücke closure scenario: traffic is rerouted through alternative paths, showing only minor increases in travel time while significantly reducing inner-city emissions and noise.</li>
+          <li>Residenzplatz closure scenario: a second experimental setup to analyze local traffic redistribution and environmental impact.</li>
+          <li>This transforms urban planning into an interactive cause-and-effect experience.</li>
+        </ul>
+      </div>
     </div>
 
 
      <div class="mt-10 border-t border-white/10 pt-8">
       <h2 class="text-sm uppercase tracking-[0.3em] text-slate-400">Key Features</h2>
-      <ul class="mt-3 space-y-2 text-sm leading-7 text-slate-400">
-        <p>
-            -Real-time traffic simulation based on OSM data </br>
-            -CO₂, noise, and congestion visualizations </br>
-            -Interactive road closure system (“Set Barrier”) </br>
-            -Scenario-based exploration of urban planning decisions </br>
-            -Simplified interface designed for non-experts </br>
-            -Serious gamification for sustainable decision-making</p>
-</ul>
+      <ul class="mt-3 list-disc list-inside space-y-2 text-sm leading-7 text-slate-400">
+        <li>Real-time traffic simulation based on OSM data.</li>
+        <li>CO₂, noise, and congestion visualizations.</li>
+        <li>Interactive road closure system (“Set Barrier”).</li>
+        <li>Scenario-based exploration of urban planning decisions.</li>
+        <li>Simplified interface designed for non-experts.</li>
+        <li>Serious gamification for sustainable decision-making.</li>
+      </ul>
     </div>
 
      <div class="mt-10 border-t border-white/10 pt-8">
       <h2 class="text-sm uppercase tracking-[0.3em] text-slate-400">Technology & Implementation</h2>
-      <ul class="mt-3 space-y-2 text-sm leading-7 text-slate-400">
-        <p>The system is built on a modular pipeline using open urban data and simulation tools. The workflow includes: -
-OpenStreetMap (OSM) data extraction via Overpass Turbo
-- Preprocessing and network refinement using JOSM </br> - Traffic simulation using SUMO </br> - GeoJSON conversion for visualization, React + Vite frontend for interactive map rendering </br> - Heatmaps for emissions, noise, and congestion </br> - Scenario-based simulation control system </br> - Scalable and adaptable architecture design and reusable for other cities.</p>
-</ul>
+      <div class="mt-3 space-y-3 text-sm leading-7 text-slate-400">
+        <p>The system is built on a modular pipeline using open urban data and simulation tools. The workflow includes:</p>
+        <ul class="list-disc list-inside space-y-2">
+          <li>OpenStreetMap (OSM) data extraction via Overpass Turbo.</li>
+          <li>Preprocessing and network refinement using JOSM.</li>
+          <li>Traffic simulation using SUMO.</li>
+          <li>GeoJSON conversion for visualization.</li>
+          <li>React + Vite frontend for interactive map rendering.</li>
+          <li>Heatmaps for emissions, noise, and congestion.</li>
+          <li>Scenario-based simulation control designed to be scalable and reusable for other cities.</li>
+        </ul>
+      </div>
     </div>
 
       <div class="mt-10 border-t border-white/10 pt-8">

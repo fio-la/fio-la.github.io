@@ -15,7 +15,7 @@
     <a href="index.html" class="mb-8 inline-flex text-sm text-slate-400 transition hover:text-white">← Back</a>
     <p class="text-[11px] uppercase tracking-[0.35em] text-slate-400"> Art Experiments</p>
     <h1 class="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">Mixing LoRAs's to Interpolate Art Styles Across History </h1>
-    <p class="mt-5 text-base leading-7 text-slate-400">Exploring the intersection of AI and art through style interpolation of </p>
+    <p class="mt-5 text-base leading-7 text-slate-400">Exploring the intersection of AI and art through historical epoch interpolation </p>
 
     <div class="mt-10 border-t border-white/10 pt-8">
       <h2 class="text-sm uppercase tracking-[0.3em] text-slate-400">Problem</h2>
@@ -26,11 +26,15 @@
 
     <div class="mt-10 border-t border-white/10 pt-8">
       <h2 class="text-sm uppercase tracking-[0.3em] text-slate-400">Approach</h2>
-      <p class="mt-3 text-sm leading-7 text-slate-400">We use Low-Rank Adaptation (LoRA) applied to the Stable Diffusion v1.4 model. </br>Three LoRAs are trained on WikiArt datasets representing:
-    </br> - Early Renaissance
-    </br> - Expressionism
-    </br> - Pop Art
-    </br> Each LoRA learns a distinct artistic distribution while keeping the base model frozen. We then perform linear interpolation between LoRA weights to generate mixed-style models.</p>
+      <div class="mt-3 space-y-3 text-sm leading-7 text-slate-400">
+        <p>We use Low-Rank Adaptation (LoRA) applied to the Stable Diffusion v1.4 model. Three LoRAs are trained on WikiArt datasets representing:</p>
+        <ul class="list-disc list-inside space-y-2">
+          <li>Early Renaissance</li>
+          <li>Expressionism</li>
+          <li>Pop Art</li>
+        </ul>
+        <p>Each LoRA learns a distinct artistic distribution while keeping the base model frozen. We then perform linear interpolation between LoRA weights to generate mixed-style models.</p>
+      </div>
     </div>
     <div class="mt-10 border-t border-white/10 pt-8">
       <h2 class="text-sm uppercase tracking-[0.3em] text-slate-400">System Design</h2>
@@ -62,8 +66,11 @@ Art style representations remain partially separable in latent space. Even blend
 
      <div class="mt-10 border-t border-white/10 pt-8">
       <h2 class="text-sm uppercase tracking-[0.3em] text-slate-400">Key Insights</h2>
-      <ul class="mt-3 space-y-2 text-sm leading-7 text-slate-400">
-        <li>- Artistic styles are not strictly isolated in diffusion latent space </br>- LoRA weights can be meaningfully interpolated for style blending </br>- Hybrid generations retain recognizable historical features </br>- Classification performance suggests structured but overlapping style representations.</li>
+      <ul class="mt-3 list-disc list-inside space-y-2 text-sm leading-7 text-slate-400">
+        <li>Artistic styles are not strictly isolated in diffusion latent space.</li>
+        <li>LoRA weights can be meaningfully interpolated for style blending.</li>
+        <li>Hybrid generations retain recognizable historical features.</li>
+        <li>Classification performance suggests structured but overlapping style representations.</li>
       </ul>
     </div>
 
